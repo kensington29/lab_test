@@ -1,0 +1,646 @@
+/* ここから下に記載していく */
+
+/* サイト外枠幅設定 */
+#site-box {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 900px;
+  z-index: 10;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  /* border: 2px solid green; */
+  /* margin: auto; */
+}
+
+/* header部設定 */
+.header {
+  height: 150px;
+  z-index: 10000;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: white;
+  /* width:1200px ; */
+  display: flex;
+  /* 左寄せ */
+  justify-content: space-between;
+  align-items: center;
+  /* ヘッダをスクロールさせない */
+  /* position: fixed; */
+  /* ヘッダを最前面に表示 */
+  /* z-index: 10000; */
+}
+
+.header img {
+  margin-left: 50px;
+}
+
+.navi_menu{
+  margin: 50px 0 50px 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.jump {
+  /* border: 2px solid yellow; */
+  width: auto;
+  margin: 0 25px 0 25px ;
+  font-size: 21px;
+  text-align: center;
+}
+
+/* リンクの装飾 */
+.jump {
+  /* 通常時 */
+  color: black;          /* ←文字色 */
+  text-decoration: none; /* ←下線なし */
+}
+.jump:hover {
+  /* マウスオン */
+  color: red;              /* ←文字色 */
+  text-decoration: underline; /* ←下線あり */
+}
+
+#mainvisual {
+  border: 1px solid transparent;
+  width: 100% ;
+  height: 440px;
+  background: pink;
+  background-image: url(../img/mainbg.png);
+  /* 繰り返し表示しない */
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  margin: auto;
+  /* flexboxレイアウト指定 */
+  display:flex;
+  flex-direction:column; /* 縦並びレイアウト */
+  justify-content: center; /* 左右中央揃え */
+  /* ↑ flex-directionをcolmnにした場合、justify-contentは上下のレイアウトになるようだ */
+  /* align-content: center;*/ /* 上下中央揃え　指定不要？*/
+}
+
+
+#slogan {
+  /* width: 900px; */
+  border: 1px solid transparent;
+  font-size: 48px;
+  color: white;
+  text-align: center;
+}
+
+#schoolname {
+  /* width: 900px; */
+  border: 1px solid transparent;
+  font-size: 35px;
+  color: white;
+  text-align: center;
+  /* sloganとの間隔を30pxにするため、marginを設定 */
+  margin-top: 30px;
+}
+
+.section {
+	width: 100%;
+	max-width: 1200px;
+	min-width: 960px;
+	z-index: 10;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 0 20px 0;
+	/* height: 500px; */
+}
+
+
+.about {
+  /* width: 100%; */
+  border: 1px solid transparent;
+}
+
+#box_about_text {
+  width: 100%;
+  border: 1px solid transparent ;
+}
+
+/* #box_about_imgs { */
+  /* width: 100%; */
+  /* border:1px solid yellow ; */
+  /* Flexboxに設定 */
+  /* display: flex; */
+  /* アイテムを横並びで逆順にする */
+  /* flex-direction: row-reverse; */
+  /* アイテムを折り返さない（デフォルト） */
+  /* flex-wrap: nowrap; */
+  /* アイテムを中央揃え */
+  /* justify-content: center; */
+  /* margin相殺が発生するため、margin-topは40pxではなく、80px */
+  /* margin-top: 40px; */
+/* } */
+
+/* #box_about_imgs .about_img_narrow { */
+  /* flex-basis:20%; */
+  /* 高さは元画像に合わせる */
+  /* height: 255px; */
+/* } */
+
+/* #box_about_imgs .about_img_wide { */
+  /* flex-basis:30%; */
+  /* 高さは元画像に合わせる  */
+  /* height: 255px; */
+/* } */
+
+/* about_img_narrowの中にあるimgタグに対して */
+/* #box_about_imgs .about_img_narrow img { */
+  /* width: 100%; */
+  /* object-fit: cover; */
+  /* .about_img_narrowで指定している高さを書いてあげる必要があります（これはテクニック!） */
+  /* height: 255px; */
+/* } */
+
+/* about_img_wideの中にあるimgタグに対して */
+/* #box_about_imgs .about_img_wide img { */
+  /* width: 100%; */
+  /* object-fit: cover; */
+  /* .about_img_wideで指定している高さを書いてあげる必要があります（これはテクニック!） */
+  /* height: 255px; */
+/* } */
+
+/*左右の矢印の色を変える*/
+#box_about_imgs .slick-prev:before,
+#box_about_imgs .slick-next:before {
+    color: tomato;
+}
+/*左右の矢印の位置を変える*/
+#box_about_imgs .slick-next {
+    right: -25px;
+    z-index: 99;
+}
+#box_about_imgs .slick-prev {
+     left: -25px;
+    z-index: 100;
+}
+/*スライド数のドットの色を変える*/
+#box_about_imgs .slick-dots li.slick-active button:before,
+#box_about_imgs .slick-dots li button:before {
+    color: tomato;
+}
+
+#slider_about {
+  /* max-width: 600px; */
+  /* min-width: 50px; */
+  max-width: 50vw;
+  min-width: 10vw;
+  /* max-height: 300px; */
+  margin: 0 auto ;
+  padding: 0 30px 30px ;
+  display: flex;
+  border: 1px solid transparent;
+}
+
+#box_about_imgs {
+  /* max-width: 700px; */
+  /* max-height: 255px; */
+  width: 100%;
+  margin: auto;
+  border: 1px solid transparent;
+}
+
+/*スライド画像の横幅可変*/
+#box_about_imgs img {
+    /* width: 100%; */
+    /* height: 100%; */
+     /* height: 255px; */
+     /* height: 100vw; */
+     /* max-height: 255px; */
+     /* min-height: 100px; */
+     border: 1px solid transparent;
+     object-fit: fill;
+}
+
+
+.course {
+  border: 1px solid transparent;
+  /* width: 100%; */
+}
+
+#text_course {
+  border: 1px solid transparent;
+}
+
+#tile_course {
+  border: 1px solid transparent;
+  width: 100%;
+  /* Flexboxに設定 */
+  display: flex;
+  /* アイテムを横並びにする */
+  flex-direction: row;
+  /* アイテムを折り返えす */
+  flex-wrap: wrap;
+  /* アイテムを中央揃え */
+  justify-content: center;
+  /* 上下方向の余白を埋める（デフォルト） */
+  align-content: stretch;
+  margin: 20px auto 0 ;
+}
+
+.course_tile_img {
+  width: 600px;
+  height: 420px;
+}
+
+.course_tile_img :hover{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px) scale(1.05);
+  transition-duration: 0.5s;
+}
+
+/* about_img_wideの中にあるimgタグに対して */
+.course_tile_img img {
+  width: 100%;
+  /* 縦横小さい方を基準にして縦横比を保持したまま拡大/縮小し、はみ出す部分をトリミング */
+  object-fit: cover;
+  /* .course_tile_imgで指定している高さを書いてあげる必要があります（これはテクニック!） */
+  height: 420px;
+}
+
+.course_tile_msg_r {
+  width: 550px;
+  height: 420px;
+  background-color: white;
+  display:flex;
+  flex-direction:row; /* 横並びレイアウト */
+  flex-wrap: wrap; /* アイテム折り返し */
+  align-content: center; /* アイテム上下中央寄せ */
+  justify-content: flex-start; /* 左寄せ */
+  padding-left: 50px;
+}
+
+.course_tile_msg_r:hover {
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px) scale(1.05);
+  transition-duration: 0.5s;
+}
+
+.course_tile_msg_l {
+  width: 550px;
+  height: 420px;
+  background-color: white;
+  display:flex;
+  flex-direction:row; /* 横並びレイアウト */
+  flex-wrap: wrap; /* アイテム折り返し */
+  align-content: center; /* アイテム上下中央寄せ */
+  justify-content: flex-end; /* 右寄せ */
+  padding-right: 50px;
+}
+
+.course_tile_msg_l:hover {
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px) scale(1.05);
+  transition-duration: 0.5s;
+}
+.course_tile_title{
+  width: 430px;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.course_tile_message {
+  width: 430px;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.news {
+  border: 1px solid transparent;
+  /* width: 100%; */
+}
+
+#news_tile {
+  border: 1px solid transparent;
+  width: 960px;
+  height: auto;
+  /* Flexboxに設定 */
+  display: flex;
+  /* アイテムを横並びにする */
+  flex-direction: row;
+  /* アイテムを折り返えす */
+  flex-wrap: nowrap;
+  /* アイテムを中央揃え */
+  justify-content: space-between;
+  /* 上下方向の余白を埋める（デフォルト） */
+  align-content: stretch;
+  /* margin相殺を考慮して、margin-bottomを60pxとする */
+  margin: 0 auto 60px auto ;
+}
+
+.news_box {
+  width: 300px ;
+  height: auto ;
+  /* 繰り返し表示しない */
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 300px 255px;
+  margin: 0;
+}
+
+.news_img {
+  width: 300px ;
+  height: 255px ;
+}
+/* news_imgの中にあるimgタグに対して */
+/* .news_box img { */
+  /* width: 100%; */
+  /* object-fit: cover; */
+  /* .news_imgで指定している高さを書いてあげる必要があります（これはテクニック!） */
+  /* height: 255px; */
+/* } */
+
+.news_box:hover{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px) scale(1.05);
+  transition-duration: 0.5s;
+}
+
+#news_1 {
+  background-image: url(../img/ピザ職人1_2.jpeg);
+}
+#news_1:hover {
+  background-image: url(../img/ピザ職人1.jpeg);
+}
+#news_2 {
+  background-image: url(../img/ピザ職人2_2.jpeg);
+}
+#news_2:hover {
+  background-image: url(../img/ピザ職人2.jpeg);
+}
+#news_3 {
+  background-image: url(../img/ピザ職人3_2.jpeg);
+}
+#news_3:hover {
+  background-image: url(../img/ピザ職人3.jpeg);
+}
+
+.news_date {
+  font-size: 18px;
+  /* 左右を中央に配置、下にマージンを設定 */
+  margin: 30px 0 0 0;
+  text-align: left;
+}
+
+.news_content {
+  font-size: 16px;
+  /* 左右を中央に配置、下にマージンを設定 */
+  margin: 24px 0 0 0;
+  text-align: start;
+  line-height: 2;
+}
+
+.access {
+  /* CONACTとの間で背景色を変えるため、borderを指定 */
+  border: 1px solid transparent;
+  background-color: snow;
+  /* width: 100%; */
+}
+
+#schoolinfo {
+  border: 1px solid transparent;
+  /* 表の行のパディング15px分を差し引いてmarginを設定 */
+  margin: 45px auto 45px;
+}
+
+#schoolinfo th {
+  font-size: 16px;
+  text-align: left;
+  width: 150px;
+  padding: 15px;
+}
+#schoolinfo td {
+  font-size: 16px;
+  text-align: left;
+  padding: 15px;
+}
+
+.contact {
+  /* width:1200px ; */
+  border: 1px solid transparent;
+  margin: auto;
+}
+
+#contact_form {
+  border-top: 1px solid #bfbfbf;
+  margin: 70px auto 0 auto;
+  letter-spacing: -0.06em;
+}
+
+#contact_form th {
+  font-size: 16px;
+  text-align: left;
+  vertical-align: top;
+  width: 240px;
+  border-bottom: 1px solid #bfbfbf;
+  border-right: 1px solid #bfbfbf;
+  padding: 17px 64px 0 16px;
+}
+#contact_form td {
+  font-size: 16px;
+  text-align: left;
+  width: 400px ;
+  border-bottom: 1px solid #bfbfbf;
+  padding: 0;
+}
+
+.iptxt_name {
+  width: 328px;
+	margin: 8px auto 8px 8px;
+}
+.iptxt_name input[type='text'] {
+	font: inherit;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 4px;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #000000;
+	border: 1px solid #bfbfbf;
+}
+.ef input[type='text']:focus {
+  border: 1px solid #da3c41;
+	outline: none;
+	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+}
+
+.ipselect_douki {
+  overflow: hidden;
+  width: 328px;
+	margin: 8px auto 8px 8px;
+  font: inherit;
+	text-align: center;
+}
+
+.ipselect_douki select {
+  width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+  border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.ipselect_douki select::-ms-expand {
+    display: none;
+}
+.ipselect_douki.sl_douki {
+	position: relative;
+	border: 1px solid #bbbbbb;
+	background: #ffffff;
+}
+.ipselect_douki.sl_douki::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666666;
+	pointer-events: none;
+}
+.ipselect_douki.sl_douki select {
+  font: inherit;
+	padding: 8px 38px 8px 8px;
+	color: #000000;
+}
+
+.ipcheck_douki {
+  width: 400px;
+	margin: 8px 8px 8px 8px;
+	text-align: left;
+}
+.ipcheck_douki ul {
+  width: 100%;
+	list-style: none;
+}
+.ipcheck_douki .list_item {
+	padding: 12px 0 12px 0;
+}
+.ipcheck_douki label {
+	cursor: pointer;
+}
+.ipcheck_douki .option-input05 {
+	position: relative;
+	margin: 0 2.5rem 0 0; /*チェックボックスとテキストの間隔　調整 */
+	cursor: pointer;
+}
+.ipcheck_douki .option-input05:before {
+	position: absolute;
+	z-index: 1;
+	top: 0.125rem;
+	left: 0.1875rem;
+	width: 0.75rem;
+	height: 0.375rem;
+	content: '';
+	-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+	        transition:         transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+	-webkit-transform: rotate(-45deg) scale(0, 0);
+	        transform: rotate(-45deg) scale(0, 0);
+	border: 2px solid #da3c41;
+	border-top-style: none;
+	border-right-style: none;
+}
+.ipcheck_douki .option-input05:checked:before {
+	-webkit-transform: rotate(-45deg) scale(1, 1);
+	        transform: rotate(-45deg) scale(1, 1);
+}
+.ipcheck_douki .option-input05:after {
+	position: absolute;
+	top: -0.35rem; /*チェックボックス位置　調整 */
+	left: 0;
+	width: 1rem;
+	height: 1rem;
+	content: '';
+	cursor: pointer;
+	border: 2px solid #f2f2f2;
+	background: #ffffff;
+}
+
+.input_comment{
+  width: 328px;
+  margin: 8px auto 8px 8px;
+  text-align: left;
+}
+
+textarea{
+  width: 100%;
+  border: 1px solid #bfbfbf;
+  padding: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  resize: none;
+  font-size: 16px;
+}
+
+#footer {
+  border: 1px solid transparent;
+  width: 100% ;
+  height: auto;
+  background-color: #707070;
+  margin: 80px auto 0 auto;
+}
+
+#copyright{
+  padding: 30px;
+  text-align: center ;
+}
+
+.e_title {
+  width: fit-content;
+  font-size: 24px;
+  /* background-color: tomato; */
+  /* 左右を中央に配置、上下にマージンを設定 */
+  margin: 60px auto 30px;
+}
+
+.e_title.et_yellow{
+  color: gold;
+}
+
+.j_title {
+  width: fit-content;
+  font-size: 18px;
+  /* 左右を中央に配置、下にマージンを設定 */
+  margin: 0 auto 60px;
+}
+
+.message{
+  width: fit-content;
+  font-size: 16px;
+  /* 左右を中央に配置、下にマージンを設定 */
+  margin: 0 auto 40px;
+  text-align: center;
+  line-height: 2;
+}
+
+.button {
+  width: 300px ;
+  height: 60px;
+  background-color: gold;
+  font-size: 18px ;
+  color: white ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto 60px;
+}
+
+.button:hover {
+  cursor:pointer;
+  transform: scale(1.1, 1.1);
+  transition: 0.3s;
+}
